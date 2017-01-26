@@ -4,5 +4,5 @@ install:
   - nuget restore StorePassword.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
-  - xbuild /p:Configuration=Debug lab3.sln
+  - xbuild /p:Configuration=Debug StorePassword.sln
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe PasswordTests/bin/Debug/PasswordTests.dll
